@@ -1,0 +1,36 @@
+{
+  "placement": [
+    {
+      "name": "Foot",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "width": 6,
+      "length": 10,
+      "height": 2
+    },
+    {
+      "name": "Arm",
+      "x": 6,
+      "y": 0,
+      "z": 0,
+      "width": 4,
+      "length": 10,
+      "height": 2
+    },
+    {
+      "name": "Leg",
+      "x": 0,
+      "y": 0,
+      "z": 2,
+      "width": 4,
+      "length": 10,
+      "height": 1
+    }
+  ],
+  "weight": 200,
+  "width": 10,
+  "length": 10,
+  "height": 3,
+  "volume": 300
+}

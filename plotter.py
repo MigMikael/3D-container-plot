@@ -8,7 +8,7 @@ import numpy as np
 # plt.rcParams['axes.unicode_minus'] = False
 
 
-def plot_package(ax, x, y, z, dx, dy, dz, name='', color='red', transparent=0.2):
+def plot_package(ax, x, y, z, dx, dy, dz, name='', color='red', transparent=0.1):
     # draw border line
     xx = [x, x, x+dx, x+dx, x]
     yy = [y, y+dy, y+dy, y, y]

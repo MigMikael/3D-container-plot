@@ -53,10 +53,16 @@ def plot_multiple_package(data_path, title, num):
     ax.set_xlim3d(0, data['width'])
     ax.set_ylim3d(0, data['length'])
     ax.set_zlim3d(0, data['height'])
+
+    # color item by name
+    unique_name = set([item['name'] for item in data['placement']])
+    name_color = {}
+    for name in unique_name:
+        name_color[name] = np.random.rand(3,)
     
     # plot package
     for item in data['placement']:
-        color = np.random.rand(3,)
+        color = name_color[item['name']]
         plot_package(
             ax, item['x'], item['y'], item['z'], 
             item['width'], item['length'], item['height'], item['name'], 

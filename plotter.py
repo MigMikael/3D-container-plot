@@ -41,12 +41,12 @@ def plot_package(ax, x, y, z, dx, dy, dz, name='', color='red', transparent=0.1)
     ax.text(x+dx/2, y+dy/2, z+dz/2, name, color="black", fontsize=8)
 
 
-def plot_multiple_package(data_path):
+def plot_multiple_package(data_path, title, num):
     # read json data
     data = {}
     with open(data_path) as json_file:
         data = json.load(json_file)
-    fig = plt.figure(figsize=(10,7))
+    fig = plt.figure(num, figsize=(10,7))
 
     # draw container
     ax = Axes3D(fig)
@@ -63,10 +63,12 @@ def plot_multiple_package(data_path):
             color=color
         )
         
-    plt.title('Packages')
-    plt.show()
+    plt.title(title)
+    return plt
 
 
 if __name__ == "__main__":
-    plot_multiple_package('./simple.json')
-    plot_multiple_package('./multiple.json')
+    plt1 = plot_multiple_package('./simple.json', 'Packages', 1)
+    plt2 = plot_multiple_package('./multiple.json', 'Packages', 2)
+    plt1.show()
+    plt2.show()

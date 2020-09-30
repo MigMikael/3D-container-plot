@@ -1,0 +1,54 @@
+{
+    "weight": 70,
+    "width": 11,
+    "length": 5.5,
+    "height": 8.5,
+    "volume": 514.25,
+    "placement": [
+        {
+            "name": "250g [powder 7]",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 7.874,
+            "length": 1.9685,
+            "height": 3.937
+        },
+        {
+            "name": "250g [powder 8]",
+            "x": 7.874,
+            "y": 0,
+            "z": 0,
+            "width": 1.9685,
+            "length": 3.937,
+            "height": 7.874
+        },
+        {
+            "name": "250g [powder 9]",
+            "x": 0,
+            "y": 3.937,
+            "z": 0,
+            "width": 7.874,
+            "length": 1.9685,
+            "height": 3.937
+        },
+        {
+            "name": "250g [powder 4]",
+            "x": 0,
+            "y": 0,
+            "z": 1.9685,
+            "width": 7.874,
+            "length": 1.9685,
+            "height": 3.937
+        },
+        {
+            "name": "250g [powder 5]",
+            "x": 0,
+            "y": 3.937,
+            "z": 1.9685,
+            "width": 7.874,
+            "length": 1.9685,
+            "height": 3.937
+        }
+    ]
+}

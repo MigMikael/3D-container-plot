@@ -1,0 +1,45 @@
+{
+    "weight": 70,
+    "width": 13.625,
+    "length": 3.375,
+    "height": 11.875,
+    "volume": 546.064453125,
+    "placement": [
+        {
+            "name": "250g [powder 6]",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 7.874,
+            "length": 1.9685,
+            "height": 3.937
+        },
+        {
+            "name": "50g [powder 1]",
+            "x": 7.874,
+            "y": 0,
+            "z": 0,
+            "width": 3.937,
+            "length": 1.9685,
+            "height": 1.9685
+        },
+        {
+            "name": "50g [powder 2]",
+            "x": 0,
+            "y": 3.937,
+            "z": 0,
+            "width": 3.937,
+            "length": 1.9685,
+            "height": 1.9685
+        },
+        {
+            "name": "50g [powder 3]",
+            "x": 3.937,
+            "y": 3.937,
+            "z": 0,
+            "width": 3.937,
+            "length": 1.9685,
+            "height": 1.9685
+        }
+    ]
+}

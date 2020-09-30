@@ -45,10 +45,10 @@ for b in packer.bins:
     print(":::::::::::", b.string())
 
     result_dict = {}
-    result_dict["weight"] = int(b.max_weight)
+    result_dict["weight"] = float(b.max_weight)
     result_dict["width"] = float(b.width)
-    result_dict["length"] = float(b.height)
-    result_dict["height"] = float(b.depth)
+    result_dict["height"] = float(b.height)
+    result_dict["length"] = float(b.depth)
     result_dict["volume"] = float(b.width * b.height * b.depth)
     
     result_dict["placement"] = []
@@ -61,8 +61,8 @@ for b in packer.bins:
 
         w, h, d = item.get_dimension()
         item_dict["width"] = float(w)
-        item_dict["length"] = float(h)
-        item_dict["height"] = float(d)
+        item_dict["height"] = float(h)
+        item_dict["length"] = float(d)
         result_dict["placement"].append(item_dict)
 
         print("====> ", item.string())

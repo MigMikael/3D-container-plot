@@ -29,6 +29,9 @@ type JBin struct {
 func main() {
 	p := bp3d.NewPacker()
 
+	// check weight
+	// cannot rotate
+	
 	// Add bins.
 	p.AddBin(bp3d.NewBin("small-envelope", 11.5, 6.125, 0.25, 10))
 	p.AddBin(bp3d.NewBin("large-envelope", 15.0, 12.0, 0.75, 15))

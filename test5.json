@@ -1,0 +1,36 @@
+{
+    "weight": 10000,
+    "width": 2960,
+    "length": 80,
+    "height": 2960,
+    "volume": 700928000,
+    "placement": [
+        {
+            "name": "Item 1",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2500,
+            "length": 20,
+            "height": 2500
+        },
+        {
+            "name": "Item 2",
+            "x": 0,
+            "y": 0,
+            "z": 20,
+            "width": 2500,
+            "length": 20,
+            "height": 2500
+        },
+        {
+            "name": "Item 3",
+            "x": 0,
+            "y": 0,
+            "z": 40,
+            "width": 2500,
+            "length": 20,
+            "height": 2500
+        }
+    ]
+}

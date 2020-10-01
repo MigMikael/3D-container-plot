@@ -113,7 +113,7 @@ def plot_multiple_package(data, title, num, scale=True):
         border_tickness=2
     )
 
-    ax.legend()
+    # ax.legend()
     plt.title(title)
     return plt
 
@@ -131,12 +131,15 @@ if __name__ == "__main__":
     # plt1.show()
     # plt2.show()
 
-    plt1 = plot_multiple_package_from_file('./test.json', 'Packages', 1, scale=True)
-    plt2 = plot_multiple_package_from_file('./test.json', 'Packages', 2, scale=False)
-    plt3 = plot_multiple_package_from_file('./test2.json', 'Packages', 3, scale=True)
-    plt4 = plot_multiple_package_from_file('./test2.json', 'Packages', 4, scale=False)
+    # plt1 = plot_multiple_package_from_file('./test.json', 'Packages', 1, scale=True)
+    # plt2 = plot_multiple_package_from_file('./test.json', 'Packages', 2, scale=False)
+    # plt3 = plot_multiple_package_from_file('./test2.json', 'Packages', 3, scale=True)
+    # plt4 = plot_multiple_package_from_file('./test2.json', 'Packages', 4, scale=False)
     
+    # plt1.show()
+    # plt2.show()
+    # plt3.show()
+    # plt4.show()
+
+    plt1 = plot_multiple_package_from_file('./test6.json', 'Packages', 1, scale=True)
     plt1.show()
-    plt2.show()
-    plt3.show()
-    plt4.show()

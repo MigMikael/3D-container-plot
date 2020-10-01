@@ -74,9 +74,9 @@ def plot_package(ax, x, y, z, dx, dy, dz, name="", color='red', transparent=0.12
 
 def plot_multiple_package(data, title, num, scale=True):
     # read json data
-    # data = json.loads(data)
+    data = json.loads(data)
     
-    fig = plt.figure(num, figsize=(14,8))
+    fig = plt.figure(num, figsize=(8,8))
 
     # draw container
     ax = Axes3D(fig)
@@ -125,21 +125,21 @@ def plot_multiple_package_from_file(data_path, title, num, scale):
         return plot_multiple_package(data, title, num, scale)
 
 
-if __name__ == "__main__":
-    # plt1 = plot_multiple_package_from_file('./simple.json', 'Packages', 1)
-    # plt2 = plot_multiple_package_from_file('./multiple.json', 'Packages', 2)
-    # plt1.show()
-    # plt2.show()
+# if __name__ == "__main__":
+#     # plt1 = plot_multiple_package_from_file('./simple.json', 'Packages', 1)
+#     # plt2 = plot_multiple_package_from_file('./multiple.json', 'Packages', 2)
+#     # plt1.show()
+#     # plt2.show()
 
-    # plt1 = plot_multiple_package_from_file('./test.json', 'Packages', 1, scale=True)
-    # plt2 = plot_multiple_package_from_file('./test.json', 'Packages', 2, scale=False)
-    # plt3 = plot_multiple_package_from_file('./test2.json', 'Packages', 3, scale=True)
-    # plt4 = plot_multiple_package_from_file('./test2.json', 'Packages', 4, scale=False)
+#     # plt1 = plot_multiple_package_from_file('./test.json', 'Packages', 1, scale=True)
+#     # plt2 = plot_multiple_package_from_file('./test.json', 'Packages', 2, scale=False)
+#     # plt3 = plot_multiple_package_from_file('./test2.json', 'Packages', 3, scale=True)
+#     # plt4 = plot_multiple_package_from_file('./test2.json', 'Packages', 4, scale=False)
     
-    # plt1.show()
-    # plt2.show()
-    # plt3.show()
-    # plt4.show()
+#     # plt1.show()
+#     # plt2.show()
+#     # plt3.show()
+#     # plt4.show()
 
-    plt1 = plot_multiple_package_from_file('./test6.json', 'Packages', 1, scale=True)
-    plt1.show()
+#     plt1 = plot_multiple_package_from_file('./test3.json', 'Packages', 1, scale=True)
+#     plt1.show()

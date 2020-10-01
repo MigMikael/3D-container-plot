@@ -29,6 +29,7 @@ type JBin struct {
 func main() {
 	p := bp3d.NewPacker()
 
+<<<<<<< HEAD
 
 	/* Test 1 from python lib */
 	// p.AddBin(bp3d.NewBin("small-envelope", 11.5, 6.125, 0.25, 10))
@@ -80,6 +81,30 @@ func main() {
 	p.AddItem(bp3d.NewItem("Item 6", 100, 100, 30, 10))
 	p.AddItem(bp3d.NewItem("Item 7", 100, 100, 30, 10))
 
+=======
+	// check weight
+	// cannot rotate
+	
+	// Add bins.
+	p.AddBin(bp3d.NewBin("small-envelope", 11.5, 6.125, 0.25, 10))
+	p.AddBin(bp3d.NewBin("large-envelope", 15.0, 12.0, 0.75, 15))
+	p.AddBin(bp3d.NewBin("small-box", 8.625, 5.375, 1.625, 70.0))
+	p.AddBin(bp3d.NewBin("medium-box", 11.0, 8.5, 5.5, 70.0))
+	p.AddBin(bp3d.NewBin("medium-2-box", 13.625, 11.875, 3.375, 70.0))
+	p.AddBin(bp3d.NewBin("large-box", 12.0, 12.0, 5.5, 70.0))
+	p.AddBin(bp3d.NewBin("large-2-box", 23.6875, 11.75, 3.0, 70.0))
+
+	// Add items.
+	p.AddItem(bp3d.NewItem("50g [powder 1]", 3.9370, 1.9685, 1.9685, 1))
+	p.AddItem(bp3d.NewItem("50g [powder 2]", 3.9370, 1.9685, 1.9685, 2))
+	p.AddItem(bp3d.NewItem("50g [powder 3]", 3.9370, 1.9685, 1.9685, 3))
+	p.AddItem(bp3d.NewItem("250g [powder 4]", 7.8740, 3.9370, 1.9685, 4))
+	p.AddItem(bp3d.NewItem("250g [powder 5]", 7.8740, 3.9370, 1.9685, 5))
+	p.AddItem(bp3d.NewItem("250g [powder 6]", 7.8740, 3.9370, 1.9685, 6))
+	p.AddItem(bp3d.NewItem("250g [powder 7]", 7.8740, 3.9370, 1.9685, 7))
+	p.AddItem(bp3d.NewItem("250g [powder 8]", 7.8740, 3.9370, 1.9685, 8))
+	p.AddItem(bp3d.NewItem("250g [powder 9]", 7.8740, 3.9370, 1.9685, 9))
+>>>>>>> efb47902763399022f4002edb89320998124b033
 
 	// Pack items to bins.
 	if err := p.Pack(); err != nil {

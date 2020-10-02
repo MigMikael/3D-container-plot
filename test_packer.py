@@ -15,10 +15,10 @@ def random_bin():
     name_len = random.randrange(5, 10)
     bin_name = get_random_string(7).upper()
     
-    w = round(random.uniform(5.0, 1000.0), 2)
-    h = round(random.uniform(5.0, 1000.0), 2)
-    d = round(random.uniform(5.0, 1000.0), 2)
-    mw = round(random.uniform(10.0, 100000.0), 2)
+    w = round(random.uniform(5000.0, 10000.0), 2)
+    h = round(random.uniform(5000.0, 10000.0), 2)
+    d = round(random.uniform(5000.0, 10000.0), 2)
+    mw = round(random.uniform(50000.0, 100000.0), 2)
     new_bin = Bin(bin_name, w, h, d, mw)
     print(new_bin.string())
     return new_bin
@@ -28,10 +28,10 @@ def random_item():
     name_len = random.randrange(3, 6)
     item_name = get_random_string(4)
     
-    w = round(random.uniform(0.0, 200.0), 2)
-    h = round(random.uniform(0.0, 200.0), 2)
-    d = round(random.uniform(0.0, 200.0), 2)
-    mw = round(random.uniform(0.0, 5000.0), 2)
+    w = round(random.uniform(1000.0, 2000.0), 2)
+    h = round(random.uniform(1000.0, 2000.0), 2)
+    d = round(random.uniform(1000.0, 2000.0), 2)
+    mw = round(random.uniform(500.0, 1000.0), 2)
     new_item = Item(item_name, w, h, d, mw)
     print(new_item.string())
     return new_item
@@ -39,13 +39,20 @@ def random_item():
 
 packer = Packer()
 
-total_bin = random.randrange(5, 10)
+total_bin = random.randrange(1, 3)
 for i in range(total_bin):
     packer.add_bin(random_bin())
 print()
-total_item = random.randrange(10, 15)
+total_item = random.randrange(20, 60)
 for i in range(total_item):
     packer.add_item(random_item())
+
+
+# packer.add_bin(Bin("The Container", 150, 150, 150, 10000))
+# for i in range(27):
+#     print(i)
+#     packer.add_item(Item("Item"+str(i), 50, 50, 50, 1))
+
 
 ''' Test 1 From example '''
 # packer.add_bin(Bin('small-envelope', 11.5, 6.125, 0.25, 10))
@@ -98,7 +105,7 @@ for i in range(total_item):
 # packer.add_item(Item("Item 7", 100, 100, 30, 10))
 
 
-packer.pack(distribute_items=True)
+packer.pack(distribute_items=False, bigger_first=False)
 
 
 figure_num = 0

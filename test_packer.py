@@ -13,20 +13,20 @@ def get_random_string(length):
 
 def random_bin():
     name_len = random.randrange(5, 10)
-    bin_name = get_random_string(name_len)
+    bin_name = get_random_string(7).upper()
     
-    w = round(random.uniform(0.0, 1000.0), 2)
-    h = round(random.uniform(0.0, 1000.0), 2)
-    d = round(random.uniform(0.0, 1000.0), 2)
-    mw = round(random.uniform(0.0, 100000.0), 2)
+    w = round(random.uniform(5.0, 1000.0), 2)
+    h = round(random.uniform(5.0, 1000.0), 2)
+    d = round(random.uniform(5.0, 1000.0), 2)
+    mw = round(random.uniform(10.0, 100000.0), 2)
     new_bin = Bin(bin_name, w, h, d, mw)
     print(new_bin.string())
     return new_bin
 
 
 def random_item():
-    name_len = random.randrange(3, 8)
-    item_name = get_random_string(name_len)
+    name_len = random.randrange(3, 6)
+    item_name = get_random_string(4)
     
     w = round(random.uniform(0.0, 200.0), 2)
     h = round(random.uniform(0.0, 200.0), 2)
@@ -42,7 +42,7 @@ packer = Packer()
 total_bin = random.randrange(5, 10)
 for i in range(total_bin):
     packer.add_bin(random_bin())
-
+print()
 total_item = random.randrange(10, 15)
 for i in range(total_item):
     packer.add_item(random_item())
@@ -103,6 +103,7 @@ packer.pack(distribute_items=True)
 
 figure_num = 0
 for b in packer.bins:
+    print("\n:::::::::::Box", str(figure_num + 1))
     print(":::::::::::", b.string())
 
     result_dict = {}
@@ -133,13 +134,13 @@ for b in packer.bins:
         print("====> ", item.string())
 
     if len(b.items) > 0:
-        print()
+        # print()
         result_json = json.dumps(result_dict)
-        print(result_json)
+        # print(result_json)
 
-        plt1 = plot_multiple_package(result_json, b.name, figure_num)
+        plt1 = plot_multiple_package(result_json, "Box " + str(figure_num + 1) + " " + b.name, figure_num)
         plt1.show()
         figure_num+=1
     
-    print("\n\n")
+    print("\n")
 
